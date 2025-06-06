@@ -1,0 +1,196 @@
+@font-face {
+    font-family: "YanShiXinShouShu"; /* 自定义字体名称 */
+    src: url("../fonts/演示新手书.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #000000, #330000, #660000, #990000, #9b0e0e, #660000, #330000, #000000);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease-in-out infinite;
+    min-height: 100vh;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(135deg, #000000, #cc0000);    position: fixed;
+    position: fixed;
+    /* 固定在顶部 */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* 确保导航栏在最上层 */
+    height: 60px; /* 增加导航栏高度 */
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(204, 0, 0, 0.3);
+}
+
+.nav a {
+    font-family: "YanShiXinShouShu", sans-serif;
+    color: white;
+    font-size: 25px;
+    padding: 0 30px;
+    text-decoration: none;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+
+
+.nav a:hover,
+.nav .active {
+    /* 当前页面的链接 */
+    background: linear-gradient(135deg, #800505, #881111);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(204, 0, 0, 0.4);
+}
+
+.main-image {
+    width: 100%;
+    margin: 0px auto;
+    display: block;
+}
+
+.content {
+    padding: 20px;
+    color: rgb(248, 210, 210);
+}
+
+.film {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.film h2 {
+    color: #e77e76;
+    /* 粉红色 */
+    margin-bottom: 35px;
+    text-align: center;
+    /* 居中标题 */
+}
+
+.film-content {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.film video {
+    width: 40%;
+    /* 缩小图片宽度 */
+    height: auto;
+    margin-right: 20px;
+}
+
+.film-text {
+    width: 70%;
+    line-height: 2.8;
+    /* 调整行高 */
+}
+
+.film-text p{
+    font-size: 18px;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+
+.gallery h2 {
+    color: rgb(255, 255, 255);
+    /* 粉红色 */
+    margin-bottom: 35px;
+    /* 调整标题与下划线之间的距离 */
+    text-align: center;
+    /* 居中标题 */
+    text-underline-offset: 20px;
+    font-family: "YanShiXinShouShu", sans-serif;
+    /* 下划线偏移 */
+    font-size: 35px;
+}
+
+.gallery-content {
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    /* 居中图片 */
+    width: 100%;
+}
+
+.gallery img {
+    width: calc(33% - 5px);
+    height: 600px;
+}
+
+.footer {
+    text-align: center;
+    padding: 0 10px;   /* 清除默认上下padding */
+    height: 60px;      /* 设置固定高度 */
+    line-height: 60px; /* 保持文字垂直居中 */
+    background-color: #910d0d;
+    color: white;
+}
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    width: 95%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.plot-title {
+    font-family: "YanShiXinShouShu", sans-serif;
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.plot-image-container {
+    text-align: center;
+}
+
+.plot-image {
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+    cursor: zoom-in;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.plot-image:hover {
+    transform: scale(1.01);
+}
+
+.click-tip {
+    color: #ccc;
+    font-size: 14px;
+    margin-top: 10px;
+}
